@@ -11,7 +11,7 @@
 # ===========================
 locale        : "en-US"
 site_theme: "default"
-minimal_mistakes_skin: "neon"
+minimal_mistakes_skin: "dark"
 title_separator: "-"
 name          : "Vishal Kumar Rai"
 description   : "Research Scholar in Quantitative Economics, ISI Delhi"
