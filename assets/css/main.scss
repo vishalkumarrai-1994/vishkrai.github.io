@@ -1,5 +1,8 @@
 ---
 ---
+@import "minimal-mistakes"; // pulls in the theme’s base
+@import "custom";           // your overrides
+
 
 /*
  * This file controls what is imported from /_sass
@@ -41,4 +44,3 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
-@import "custom";
