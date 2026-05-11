@@ -50,7 +50,4 @@ h1, h2, h3 {
     backdrop-filter: blur(1px) brightness(0.9);
   }
 }
-.theme-toggle {
-  display: none !important;
-}
 
