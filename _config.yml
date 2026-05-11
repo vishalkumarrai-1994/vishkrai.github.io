@@ -10,9 +10,8 @@
 # Basic Site Settings
 # ===========================
 locale        : "en-US"
-site_theme    : "neon"
-minimal_mistakes_skin: "dark"
-title         : "Vishal Kumar Rai"
+site_theme: "default"
+minimal_mistakes_skin: "neon"
 title_separator: "-"
 name          : "Vishal Kumar Rai"
 description   : "Research Scholar in Quantitative Economics, ISI Delhi"
