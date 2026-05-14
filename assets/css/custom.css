@@ -43,7 +43,7 @@ h1, h2, h3 {
 }
 
 .masthead__title a {
-  font-size: 2.4rem;        /* bigger size */
+  font-size: 2.0rem;        /* bigger size */
   font-weight: 700;         /* bold */
   text-decoration: none;    /* no underline */
   font-family: 'Helvetica', sans-serif;
