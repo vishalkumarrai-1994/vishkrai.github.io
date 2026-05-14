@@ -43,11 +43,10 @@ h1, h2, h3 {
 }
 
 .masthead__title a {
-  font-size: 2.2rem;     /* increase size */
-  font-weight: 700;      /* bold */
-  text-decoration: none; /* remove underline */
-  color: #000000;        /* keep black text */
-  font-family: 'Helvetica', sans-serif; /* clean font */
+  font-size: 2.4rem;        /* bigger size */
+  font-weight: 700;         /* bold */
+  text-decoration: none;    /* no underline */
+  font-family: 'Helvetica', sans-serif;
 }
 
 .masthead__inner-wrap {
@@ -55,6 +54,7 @@ h1, h2, h3 {
   justify-content: space-between; /* name left, nav right */
   align-items: center;
 }
+
 
 
 
