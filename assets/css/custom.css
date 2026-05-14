@@ -37,6 +37,11 @@ h1, h2, h3 {
   color: #000000; /* headings also black */
 }
 
+.author__avatar img {
+  border-radius: 0 !important;
+}
+
+
 /* Dark mode adjustments */
 @media (prefers-color-scheme: dark) {
   body {
