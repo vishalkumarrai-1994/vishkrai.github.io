@@ -19,16 +19,16 @@ body::before {
   content: "";
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.25); /* subtle dark tint */
+  background: rgba(0,0,0,0.25); /* subtle dark tint for contrast */
   backdrop-filter: blur(1px);
   pointer-events: none;
   z-index: 0;
 }
 
+/* Text shadow for readability */
 body, .main, .page__content, h1, h2, h3 {
-  text-shadow: 0 1px 2px rgba(255,255,255,0.8); /* soft glow */
+  text-shadow: 0 1px 2px rgba(255,255,255,0.8); /* soft glow to lift text */
 }
-
 
 /* Ensure main content sits above overlay */
 .main, .page__content {
@@ -51,8 +51,10 @@ h1, h2, h3 {
     color: #000000;
   }
   body::before {
-    background: rgba(255,255,255,0.25); /* lighter overlay for night */
+    background: rgba(0,0,0,0.35); /* slightly stronger dark overlay at night */
     backdrop-filter: blur(1px) brightness(0.9);
   }
+  body, .main, .page__content, h1, h2, h3 {
+    text-shadow: 0 1px 3px rgba(255,255,255,0.85); /* slightly stronger glow for night */
+  }
 }
-
