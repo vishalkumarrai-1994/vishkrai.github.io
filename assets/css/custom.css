@@ -42,6 +42,22 @@ h1, h2, h3 {
   border-radius: 0 !important;
 }
 
+.masthead__title a {
+  font-size: 2.2rem;     /* increase size */
+  font-weight: 700;      /* bold */
+  text-decoration: none; /* remove underline */
+  color: #000000;        /* keep black text */
+  font-family: 'Helvetica', sans-serif; /* clean font */
+}
+
+.masthead__inner-wrap {
+  display: flex;
+  justify-content: space-between; /* name left, nav right */
+  align-items: center;
+}
+
+
+
 /* Dark mode adjustments */
 @media (prefers-color-scheme: dark) {
   body {
