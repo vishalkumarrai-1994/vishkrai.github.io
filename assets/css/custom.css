@@ -19,25 +19,25 @@ body::before {
   content: "";
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255,255,255,0.75); /* faint white overlay */
+  background: rgba(255,255,255,0.8); /* faint white overlay */
   backdrop-filter: blur(1px);
   pointer-events: none;
   z-index: 0;
 }
 
-/* Elliptical vignette effect */
+/* Spotlight vignette effect */
 body::after {
   content: "";
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   background: radial-gradient(ellipse at center,
-    rgba(0,0,0,0) 60%,     /* transparent in the middle */
-    rgba(0,0,0,0.55) 100%  /* darker edges */
+    rgba(255,255,255,0.95) 40%,   /* very light center */
+    rgba(0,0,0,0.65) 100%         /* dark edges */
   );
+  background-size: 120% 100%; /* stretch horizontally for spotlight column */
   pointer-events: none;
   z-index: 0;
 }
-
 
 /* Ensure main content sits above overlays */
 .main, .page__content {
@@ -54,19 +54,20 @@ h1, h2, h3 {
 /* Dark mode adjustments */
 @media (prefers-color-scheme: dark) {
   body {
-    color: #000000; /* keep black text even in dark mode */
+    color: #ffffff; /* switch to white text in dark mode */
   }
   h1, h2, h3 {
-    color: #000000;
+    color: #ffffff;
   }
   body::before {
-    background: rgba(255,255,255,0.65); /* faint overlay for night */
+    background: rgba(255,255,255,0.6); /* faint overlay for night */
     backdrop-filter: blur(1px) brightness(0.9);
   }
   body::after {
-    background: radial-gradient(circle at center,
-      rgba(0,0,0,0) 70%,
-      rgba(0,0,0,0.35) 100% /* slightly stronger vignette at night */
+    background: radial-gradient(ellipse at center,
+      rgba(255,255,255,0.85) 35%,  /* bright spotlight center */
+      rgba(0,0,0,0.75) 100%        /* even darker edges at night */
     );
+    background-size: 120% 100%;
   }
 }
