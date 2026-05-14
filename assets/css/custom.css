@@ -14,7 +14,7 @@ body {
   background-color: #f9f9f9; /* very light fallback */
 }
 
-/* Overlay tuned for faint background + vignette */
+/* Overlay tuned for faint background */
 body::before {
   content: "";
   position: fixed;
@@ -25,18 +25,19 @@ body::before {
   z-index: 0;
 }
 
-/* Vignette effect */
+/* Stronger vignette effect */
 body::after {
   content: "";
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   background: radial-gradient(circle at center,
-    rgba(0,0,0,0) 70%,   /* transparent in the middle */
-    rgba(0,0,0,0.25) 100% /* soft dark edges */
+    rgba(0,0,0,0) 60%,    /* fully transparent in the middle */
+    rgba(0,0,0,0.5) 100%  /* darker edges */
   );
   pointer-events: none;
   z-index: 0;
 }
+
 
 /* Ensure main content sits above overlays */
 .main, .page__content {
