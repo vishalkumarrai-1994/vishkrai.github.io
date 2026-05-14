@@ -25,35 +25,28 @@ body::before {
   z-index: 0;
 }
 
-/* Semi-transparent content container */
+/* Ensure main content sits above overlay */
 .main, .page__content {
   position: relative;
   z-index: 1;
-  color: #000000;
-  background: rgba(255,255,255,0.9); /* light panel behind text */
-  padding: 1rem 1.5rem;
-  border-radius: 6px;
+  color: #000000; /* enforce black text inside content */
 }
 
 /* Headings */
 h1, h2, h3 {
-  color: #000000;
+  color: #000000; /* headings also black */
 }
 
 /* Dark mode adjustments */
 @media (prefers-color-scheme: dark) {
   body {
-    color: #ffffff;
+    color: #000000; /* keep black text even in dark mode */
   }
   h1, h2, h3 {
-    color: #ffffff;
+    color: #000000; /* headings stay black */
   }
   body::before {
-    background: rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.65); /* faint overlay for night */
     backdrop-filter: blur(1px) brightness(0.9);
-  }
-  .main, .page__content {
-    background: rgba(0,0,0,0.75); /* dark panel for text */
-    color: #ffffff;
   }
 }
