@@ -25,14 +25,14 @@ body::before {
   z-index: 0;
 }
 
-/* Stronger vignette effect */
+/* Elliptical vignette effect */
 body::after {
   content: "";
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: radial-gradient(circle at center,
-    rgba(0,0,0,0) 60%,    /* fully transparent in the middle */
-    rgba(0,0,0,0.5) 100%  /* darker edges */
+  background: radial-gradient(ellipse at center,
+    rgba(0,0,0,0) 60%,     /* transparent in the middle */
+    rgba(0,0,0,0.55) 100%  /* darker edges */
   );
   pointer-events: none;
   z-index: 0;
